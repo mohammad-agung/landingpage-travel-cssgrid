@@ -1,5 +1,4 @@
-const desktopMenu = document.querySelector(".desktop-menu");
-const mobileMenu = document.querySelector(".mobile-menu");
+const navbar = document.querySelector("nav");
 
 const onScroll = () => {
     const scroll = document.documentElement.scrollTop;
@@ -9,16 +8,16 @@ const onScroll = () => {
     myFunction(mediaQuery);
 
     if (scroll > 40) {
-        desktopMenu.classList.add("animated", "fadeInDown", "navbar-fixed", "nav-desktop");
+        navbar.classList.add("animated", "fadeInDown", "navbar-fixed", "nav-desktop");
     } else {
-        desktopMenu.classList.remove("animated", "fadeInDown", "navbar-fixed", "nav-desktop");
+        navbar.classList.remove("animated", "fadeInDown", "navbar-fixed", "nav-desktop");
     }
 
     function myFunction(mediaQueryOn) {
         if (scroll > 40) {
-            mobileMenu.classList.add("animated", "fadeInDown", "navbar-fixed", "nav-mobile", "bg-shadow");
+            navbar.classList.add("animated", "fadeInDown", "navbar-fixed", "nav-desktop", "bg-shadow");
         } else {
-            mobileMenu.classList.remove("animated", "fadeInDown", "navbar-fixed", "nav-mobile", "bg-shadow");
+            navbar.classList.remove("animated", "fadeInDown", "navbar-fixed", "nav-desktop", "bg-shadow");
         }
     }
 };
